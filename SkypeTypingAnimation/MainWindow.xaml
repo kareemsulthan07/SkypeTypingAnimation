@@ -1,0 +1,69 @@
+﻿<Window x:Class="SkypeTypingAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkypeTypingAnimation"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="450" 
+        Width="750"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+    </Window.Resources>
+
+    <Grid>
+        <Canvas x:Name="mainCanvas">
+
+            <Ellipse x:Name="ellipse1"
+                     Fill="LightGray"
+                     Width="100"
+                     Height="100" 
+                     RenderTransformOrigin="0.5,0.5"
+                     Canvas.Top="150"
+                     Canvas.Left="100">
+                <Ellipse.RenderTransform>
+                    <ScaleTransform x:Name="e1ScaleTransform"/>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+
+            <Ellipse x:Name="ellipse2"
+                     Fill="LightGray"
+                     Width="100"
+                     Height="100" 
+                     RenderTransformOrigin="0.5,0.5"
+                     Canvas.Top="150"
+                     Canvas.Left="300">
+                <Ellipse.RenderTransform>
+                    <ScaleTransform x:Name="e2ScaleTransform"/>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+
+            <Ellipse x:Name="ellipse3"
+                     Fill="LightGray"
+                     Width="100"
+                     Height="100" 
+                     RenderTransformOrigin="0.5,0.5"
+                     Canvas.Top="150"
+                     Canvas.Left="500">
+                <Ellipse.RenderTransform>
+                    <ScaleTransform x:Name="e3ScaleTransform"/>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+
+            <Ellipse x:Name="movEllipse"
+                     Fill="LightGray"
+                     Width="100"
+                     Height="100"
+                     Canvas.Top="150"
+                     Canvas.Left="100"
+                     RenderTransformOrigin="0.5,0.5">
+                <Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <TranslateTransform x:Name="meTranslateTransform" X="0"/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Canvas>
+    </Grid>
+</Window>
